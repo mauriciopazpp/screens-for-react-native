@@ -8,6 +8,7 @@
         "@components": "./app/src/components",
         "@screen": "./app/src/screens",
         "@store": "./app/src/store",
+        "@utils": "./app/utils",
         "!config": "./app/config"
       }
     }]
