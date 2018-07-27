@@ -18,5 +18,15 @@ export const login = style({
         paddingBottom: scaleVertical(22),
         alignItems: 'center',
         flex: -1
+    },
+    buttons: {
+        flexDirection: 'row',
+        marginBottom: scaleVertical(24)
+    },
+    save: {
+        marginVertical: 9
+    },
+    button: {
+      marginHorizontal: 14
     }
 })

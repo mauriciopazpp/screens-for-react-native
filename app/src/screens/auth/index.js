@@ -10,7 +10,10 @@ import {
   } from 'react-native'
 
 import {
-    RkAvoidKeyboard
+    RkButton,
+    RkText,
+    RkAvoidKeyboard,
+    RkTextInput
 } from 'react-native-ui-kitten'
 
 import { login as style } from './assets/style'
@@ -41,7 +44,18 @@ class LoginScreen extends React.Component {
             style={ style.screen }>
                 { image }
                 <View style={ style.container }>
-                    <Text>Login screen!</Text>
+                    <RkTextInput
+                        rkType='rounded'
+                        placeholder='Username'/>
+                    <RkTextInput
+                        rkType='rounded'
+                        placeholder='Password'
+                        secureTextEntry={true}/>
+                    <RkButton
+                        onPress={() => { this.props.navigation.goBack() }}
+                        style={ style.button } rkType='primary'>
+                        Login
+                    </RkButton>
                 </View>
             </RkAvoidKeyboard>
         )
