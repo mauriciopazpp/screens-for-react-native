@@ -1,6 +1,6 @@
 import React from 'react'
 import { Provider as Redux } from 'react-redux'
-
+import { AppRegistry } from 'react-native'
 import store from '@store'
 import Main from './app/main'
 
