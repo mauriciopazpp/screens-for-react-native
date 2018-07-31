@@ -6,22 +6,38 @@ import {
     Keyboard,
     Dimensions,
     Image,
-    View
+    View,
+    TouchableOpacity
   } from 'react-native'
-
 import {
     RkButton,
-    RkText,
     RkAvoidKeyboard,
     RkTextInput
 } from 'react-native-ui-kitten'
-
+import { loginRedux } from './store/actions'
 import { login as style } from './assets/style'
 import { scaleModerate } from '@utils/scale'
+import eyeBlackImg from './assets/img/eye_black.png'
 
 class LoginScreen extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            email: '',
+            password: '',
+            passwordShowing: true,
+            pressingShowPassword: false
+        }
+    }
+
+    onSubmit() {
+        //this.props.loginRedux(this.state.email, this.state.password)
+    }
+
+    showPassword() {
+        this.state.pressingShowPassword === false
+            ? this.setState({ passwordShowing: false, pressingShowPassword: true })
+            : this.setState({ passwordShowing: true, pressingShowPassword: false })
     }
 
     _renderImage(image) {
@@ -45,16 +61,28 @@ class LoginScreen extends React.Component {
                 { image }
                 <View style={ style.container }>
                     <RkTextInput
+                        style={ style.formSize }
                         rkType='rounded'
                         placeholder='Username'/>
                     <RkTextInput
+                        style={ style.formSize }
                         rkType='rounded'
                         placeholder='Password'
                         secureTextEntry={true}/>
+                    <TouchableOpacity
+                        activeOpacity={ 0.7 }
+                        secureTextEntry={ this.state.passwordShowing }
+                        style={ style.btnEye }
+                        onPress={ this.showPassword.bind(this) }>
+                        <Image source={ eyeBlackImg } style={ style.iconEye } />
+                    </TouchableOpacity>
+
                     <RkButton
-                        onPress={() => { this.props.navigation.goBack() }}
+                        onPress={() => { this.onSubmit.bind(this) }}
                         style={ style.button } rkType='primary'>
-                        Login
+                        <Text style={ style.buttonText }>
+                            Login
+                        </Text>
                     </RkButton>
                 </View>
             </RkAvoidKeyboard>
@@ -66,5 +94,10 @@ const mapStateToProps = state => {
     return { auth: state.auth }
 }
 
-export default connect(mapStateToProps)
+const matchDispatchToProps = dispatch => {
+    return bindActionCreators({ loginRedux }, dispatch)
+}
+
+
+export default connect(mapStateToProps, matchDispatchToProps)
 (LoginScreen)
