@@ -4,7 +4,9 @@ import { Dimensions } from 'react-native'
 
 const style = props => StyleSheet.create(props)
 
-const containerForm = Dimensions.get('window').width - 17
+const $magicSizeOne = 25;
+
+const containerForm = Dimensions.get('window').width - ($magicSizeOne * 3)
 
 export const login = style({
     screen: {
@@ -14,29 +16,29 @@ export const login = style({
     },
     image: {
       resizeMode: 'cover',
-      marginBottom: scaleVertical(10)
+      marginBottom: scaleVertical($magicSizeOne/2)
     },
     container: {
-        paddingHorizontal: 25,
-        paddingBottom: scaleVertical(22),
+        paddingHorizontal: $magicSizeOne,
+        paddingBottom: scaleVertical($magicSizeOne),
         alignItems: 'center',
-        flex: -1
+        flex: 1
     },
     buttons: {
         flexDirection: 'row',
-        marginBottom: scaleVertical(24)
+        marginBottom: scaleVertical($magicSizeOne)
     },
     save: {
-        marginVertical: 9
+        marginVertical: $magicSizeOne/2
     },
     formSize: {
         width: containerForm
     },
     button: {
-        borderRadius: 20,
-        padding: 17,
+        borderRadius: $magicSizeOne,
+        padding: $magicSizeOne,
         width: containerForm,
-        marginTop: 12
+        marginTop: $magicSizeOne/2
     },
     buttonText: {
         fontSize: 16,
@@ -45,12 +47,16 @@ export const login = style({
     },
     btnEye: {
         position: 'absolute',
-        top: 70,
-        right: 40
+        top: $magicSizeOne * 6.1,
+        right: $magicSizeOne * 2
     },
     iconEye: {
-        width: 25,
-        height: 25,
+        width: $magicSizeOne,
+        height: $magicSizeOne,
         tintColor: 'rgba(0,0,0,0.2)'
+    },
+    appName: {
+        fontSize: $magicSizeOne,
+        margin: $magicSizeOne
     }
 })
