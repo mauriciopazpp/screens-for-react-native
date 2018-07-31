@@ -52,7 +52,7 @@ class LoginScreen extends React.Component {
         image = (<Image style={[style.image, {height, width}]}
                         source={ backgroundImg }/>)
         return image
-      }
+    }
 
     render() {
         let image = this._renderImage()
