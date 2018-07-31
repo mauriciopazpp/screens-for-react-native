@@ -1,6 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from "redux"
+import { login as style } from './assets/style'
+import { scaleModerate } from '@utils/scale'
+import eyeBlackImg from './assets/img/eye_black.png'
+import backgroundImg from './assets/img/background.png'
+//import { loginRedux } from './store/actions'
 import {
     Text,
     Keyboard,
@@ -8,16 +13,12 @@ import {
     Image,
     View,
     TouchableOpacity
-  } from 'react-native'
+} from 'react-native'
 import {
     RkButton,
     RkAvoidKeyboard,
     RkTextInput
 } from 'react-native-ui-kitten'
-import { loginRedux } from './store/actions'
-import { login as style } from './assets/style'
-import { scaleModerate } from '@utils/scale'
-import eyeBlackImg from './assets/img/eye_black.png'
 
 class LoginScreen extends React.Component {
     constructor(props) {
@@ -32,6 +33,9 @@ class LoginScreen extends React.Component {
 
     onSubmit() {
         //this.props.loginRedux(this.state.email, this.state.password)
+        const { navigate: navigateTo } = this.props.navigation
+
+        navigateTo('categories')
     }
 
     showPassword() {
@@ -46,7 +50,7 @@ class LoginScreen extends React.Component {
         let width = Dimensions.get('window').width
 
         image = (<Image style={[style.image, {height, width}]}
-                          source={require('./assets/img/background.png')}/>)
+                        source={ backgroundImg }/>)
         return image
       }
 
@@ -55,28 +59,32 @@ class LoginScreen extends React.Component {
 
         return (
             <RkAvoidKeyboard
-            onStartShouldSetResponder={ (e) => true }
-            onResponderRelease={ (e) => Keyboard.dismiss() }
-            style={ style.screen }>
+                onStartShouldSetResponder={ (e) => true }
+                onResponderRelease={ (e) => Keyboard.dismiss() }
+                style={ style.screen }>
                 { image }
                 <View style={ style.container }>
+                    <Text style={ style.appName }>
+                        App name
+                    </Text>
                     <RkTextInput
                         style={ style.formSize }
                         rkType='rounded'
-                        placeholder='Username'/>
+                        placeholder='Username'
+                        value={ this.state.email } />
                     <RkTextInput
                         style={ style.formSize }
                         rkType='rounded'
                         placeholder='Password'
-                        secureTextEntry={true}/>
+                        secureTextEntry={true}
+                        secureTextEntry={ this.state.passwordShowing }
+                        value={ this.state.password }/>
                     <TouchableOpacity
                         activeOpacity={ 0.7 }
-                        secureTextEntry={ this.state.passwordShowing }
                         style={ style.btnEye }
                         onPress={ this.showPassword.bind(this) }>
                         <Image source={ eyeBlackImg } style={ style.iconEye } />
                     </TouchableOpacity>
-
                     <RkButton
                         onPress={() => { this.onSubmit.bind(this) }}
                         style={ style.button } rkType='primary'>
@@ -94,10 +102,13 @@ const mapStateToProps = state => {
     return { auth: state.auth }
 }
 
-const matchDispatchToProps = dispatch => {
+/* const matchDispatchToProps = dispatch => {
     return bindActionCreators({ loginRedux }, dispatch)
-}
+} */
 
 
-export default connect(mapStateToProps, matchDispatchToProps)
+export default connect(
+    mapStateToProps,
+    //matchDispatchToProps
+)
 (LoginScreen)
