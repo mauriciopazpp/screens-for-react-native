@@ -2,7 +2,7 @@
 
 ## Screens
 
-Solarized dark             |  Solarized Ocean
+Login screen               |  Tab screen
 :-------------------------:|:-------------------------:
 ![](https://github.com/mauriciopazpp/screens-for-react-native/blob/master/app/screenshots/auth-mobile.png)  |  ![](https://github.com/mauriciopazpp/screens-for-react-native/blob/master/app/screenshots/tabs-mobile.png)
 
