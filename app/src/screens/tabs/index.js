@@ -17,8 +17,8 @@ const TabHomeStack = createStackNavigator({
 })
 
 export default createBottomTabNavigator({
-    Details: TabDetailsStack,
-    Home: TabHomeStack
+    Home: TabHomeStack,
+    Details: TabDetailsStack
   },
   {
     navigationOptions: ({ navigation }) => ({

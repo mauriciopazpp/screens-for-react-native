@@ -13,8 +13,7 @@ const routes =
         navigationOptions: { header: null }
     },
     tabHome: {
-        screen: tabHome,
-        navigationOptions: { header: null }
+        screen: tabHome
     },
     tabDetail: {
         screen: tabDetail,
