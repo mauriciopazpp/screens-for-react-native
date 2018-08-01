@@ -4,10 +4,10 @@
 
 <div style="style='display: flex;'">
   <div style="1px solid #dedede">
-    <img style="flex: 33.33%;padding: 5px;" width='200' src="https://github.com/mauriciopazpp/screens-for-react-native/blob/master/app/screenshots/auth.png"/>
+    <img style="flex: 33.33%;padding: 5px;" width='200' src="https://github.com/mauriciopazpp/screens-for-react-native/blob/master/app/screenshots/auth-mobile.png"/>
   </div>
   <div style="1px solid #dedede">
-    <img style="flex: 33.33%;padding: 5px;" width='200' src="https://github.com/mauriciopazpp/screens-for-react-native/blob/master/app/screenshots/tabs.png"/>
+    <img style="flex: 33.33%;padding: 5px;" width='200' src="https://github.com/mauriciopazpp/screens-for-react-native/blob/master/app/screenshots/tabs-mobile.png"/>
   </div>
 </div>
 
