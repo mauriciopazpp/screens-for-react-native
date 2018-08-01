@@ -1,3 +1,9 @@
+### Screens for react-native with redux
+
+## Login screen
+
+<img width='200' src="https://github.com/mauriciopazpp/screens-for-react-native/blob/master/app/screenshots/auth.png"/>
+
 ## Available Scripts
 
 If Yarn was installed when the project was initialized, then dependencies will have been installed via Yarn, and you should probably use it to run these commands as well. Unlike dependency installation, command running syntax is identical for Yarn and NPM at the time of this writing.
