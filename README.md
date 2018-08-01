@@ -1,6 +1,6 @@
 ### Screens for react-native with redux
 
-## Login screen
+## Screens
 
 <img width='200' src="https://github.com/mauriciopazpp/screens-for-react-native/blob/master/app/screenshots/auth.png"/>
 
