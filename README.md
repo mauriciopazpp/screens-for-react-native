@@ -2,7 +2,16 @@
 
 ## Screens
 
-<img width='200' src="https://github.com/mauriciopazpp/screens-for-react-native/blob/master/app/screenshots/auth.png"/>
+<div style="style='display: flex;'">
+  <div style="1px solid #dedede">
+    <img style="flex: 33.33%;padding: 5px;" width='200' src="https://github.com/mauriciopazpp/screens-for-react-native/blob/master/app/screenshots/auth.png"/>
+  </div>
+  <div style="1px solid #dedede">
+    <img style="flex: 33.33%;padding: 5px;" width='200' src="https://github.com/mauriciopazpp/screens-for-react-native/blob/master/app/screenshots/tabs.png"/>
+  </div>
+</div>
+
+<br>
 
 ## Available Scripts
 
