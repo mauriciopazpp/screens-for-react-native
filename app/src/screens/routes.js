@@ -3,11 +3,16 @@ import { createStackNavigator } from 'react-navigation'
 
 import login from '@screen/auth'
 import tabs from '@screen/tabs'
+import list from '@screen/list'
 import tabDetail from '@screen/tabs/containers/TabDetail'
 import tabHome from '@screen/tabs/containers/TabHome'
 
 const routes =
 {
+    list: {
+        screen: list,
+        navigationOptions: { header: null }
+    },
     tabs: {
         screen: tabs,
         navigationOptions: { header: null }
