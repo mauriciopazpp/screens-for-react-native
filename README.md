@@ -2,17 +2,29 @@
 
 ## Screens
 
-<p>
+<div align="center">
   <img align="left" width="200" src="https://github.com/mauriciopazpp/screens-for-react-native/blob/master/app/screenshots/auth-mobile.png">
 
   <img align="left" width="200" src="https://github.com/mauriciopazpp/screens-for-react-native/blob/master/app/screenshots/tabs-mobile.png">
 
   <img align="left" width="200" src="https://github.com/mauriciopazpp/screens-for-react-native/blob/master/app/screenshots/list-mobile.png">
+</div>
+
+
+<br />
+
+<h3 align="center">
+  Available Scripts
+</h3>
+
+
+<br />
+
+<p align="center">
+  Cross Platform <a href="https://facebook.github.io/react-native/">React Native</a> UI Toolkit
 </p>
 
----
-
-### Available Scripts
+<br />
 
 If Yarn was installed when the project was initialized, then dependencies will have been installed via Yarn, and you should probably use it to run these commands as well. Unlike dependency installation, command running syntax is identical for Yarn and NPM at the time of this writing.
 
