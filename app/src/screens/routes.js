@@ -11,7 +11,7 @@ const routes =
 {
     list: {
         screen: list,
-        navigationOptions: { header: null }
+        navigationOptions: { title: "List of something" }
     },
     tabs: {
         screen: tabs,
